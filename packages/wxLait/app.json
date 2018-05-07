@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/welcome/index",
+    "pages/commend/index",
+    "pages/commend/search/index",
+    "pages/my/book/index",
+    "pages/my/index",
+    "pages/commend/detail/index",
+    "pages/topic/index",
+    "pages/logs/logs",
+    "pages/my/mycollect/index",
+    "pages/my/mynotice/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#37aeff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "老铁精选",
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#37aeff",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/commend/index",
+        "iconPath": "image/topic/ic_recommend_nor.png",
+        "selectedIconPath": "image/topic/ic_recommend_res.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/topic/index",
+        "iconPath": "image/topic/ic_topic_nor.png",
+        "selectedIconPath": "image/topic/ic_topic_res.png",
+        "text": "话题"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "image/topic/ic_my_nor.png",
+        "selectedIconPath": "image/topic/ic_my_res.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": false
+}

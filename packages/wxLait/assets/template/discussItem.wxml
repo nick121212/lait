@@ -1,0 +1,15 @@
+<template name="discussItem">
+  <view class="discuss-content-p" wx:for="{{discussList}}" wx:key="">
+    <view class='item-top'>
+      <view class='item-left'>
+        <view class="avatar">
+
+          <image class="img" src="{{item.user.auths[0].avatar==null?'/image/topic/ic_logo.png':item.user.auths[0].avatar}}"></image>
+        </view>
+        <text class='text-tag'>{{item.user.auths[0].nickname}}</text>
+      </view>
+       <text class='discuss-time'>{{item.createDate}}</text> 
+    </view>
+    <text class='discuss-content-text'>{{item.content}}</text>
+  </view>
+</template>

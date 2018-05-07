@@ -1,0 +1,24 @@
+<import src="../../../assets/template/itemDetail.wxml" />
+<import src="../../../assets/template/discussItem.wxml" />
+<template is="list" data="{{resultList}}" />
+<view class='view-commend-p'>
+
+<text class='text-commend'>评论</text>
+<view class='discuss-p'>
+<template is="discussItem" data="{{discussList}}" />
+<view class='bottom-margin-60'></view>
+</view>
+</view>
+
+
+<view class='bottom-view'>
+
+<input class='input-commend' type='text' value='{{commentInput}}' placeholder="写评论..." bindinput="commentInput" maxlength='200'></input>
+
+<view class='btn-send-p' bindtap='sendCommend'>
+<view class='img-send-p'>
+<image class='img-send' src='/image/commend/ic_send.png'></image>
+</view>
+<text class='text-send'>发送</text>
+</view>
+</view>

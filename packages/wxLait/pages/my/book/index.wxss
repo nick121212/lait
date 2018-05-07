@@ -1,0 +1,57 @@
+/* pages/my/book/index.wxss */
+
+.item-p{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.item-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.img-book-head{
+  height: 50px;
+  width: 50px;
+}
+
+.book-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.book-title{
+  color: #333333;
+  font-size: 16px;
+  display: flex;
+  align-items: left;
+}
+.book-content{
+  color: #B2B2B2;
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: left;
+}
+
+.img-notice{
+  height: 18px;
+  width: 18px;
+}
+
+
+.item-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

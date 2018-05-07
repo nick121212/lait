@@ -1,0 +1,72 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: white
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #333333;
+  size: 16sp;
+
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+.user-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+  background-color: white;
+}
+.my-menu-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.my-menu-icon{
+  width: 40rpx;
+  height: 40rpx;
+  justify-content: center;
+}
+.my-menu-text{
+  justify-content: center;
+  font-size: 34rpx;
+  color: #333333;
+  margin-left: 44rpx;
+}
+.my-menu-item{
+  display: flex;
+  flex-direction: row;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  padding-left: 40px;
+  justify-content: flex-start;
+}
+.my-menu-item:active {
+  background-color: #e4e4e4;
+}
+.contact-btn{
+  position: absolute;
+  left: 80px;
+}
+
+.my-menu-text-help{
+  justify-content: flex-start;
+  position: relative;
+  left: 0;
+  font-size: 34rpx;
+  color: #333333;
+}

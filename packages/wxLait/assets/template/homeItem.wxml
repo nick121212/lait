@@ -1,0 +1,68 @@
+<template name="list">
+  <view class="item-p" wx:for="{{resultList}}" wx:key="">
+    <view class="item-top">
+      <view class='item-left'>
+        <view class="avatar">
+
+          <image class="img" src="{{item.coverImage==null?'/image/topic/ic_logo.png':item.coverImage}}"></image>
+        </view>
+        <text class='text-tag'>{{item.title}}</text>
+      </view>
+
+      <text bindtap='bookUser' data-item='{{item}}' data-index='{{index}}' class="{{item.isFollow?'hasAskBtn':'askBtn'}}">{{item.isFollow?'已关注':'+ 关注'}}</text>
+    </view>
+
+    <text class='item-content' bindtap='jumpToDetail' data-index='{{index}}'>{{item.content}}</text>
+
+
+    <view bindtap='jumpToDetail' data-index='{{index}}' wx:if='{{item.imageArr!=null||item.videos!=null}}' class='item-center'>
+      <!--视频  -->
+      <view class='video-p' wx:if='{{item.videos!=null}}'>
+        <image wx:if='{{item.coverImage==null}}' class='view-img' src='/image/common/default-video.gif' />
+
+        <image wx:if='{{item.coverImage!=null}}' class='view-img' src='{{item.coverImage}}' />
+        <view class='video-play-p'>
+          <image class='video-play' src='/image/commend/ic_video.png' />
+        </view>
+      </view>
+
+      <!--图片  -->
+      <view class="weui-grids" wx:if='{{item.imageArr!=null}}'>
+        <view class="weui-grid" wx:for="{{item.imageArr}}" wx:key="{{index}}">
+          <view class="weui-grid__icon">
+            <image data-index="{{index}}" bindtap="previewImage" data-index="{{index}}" data-imgurl="{{item.imageArr}}" src="{{item}}" mode="scaleToFill" />
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='item-bottom'>
+      <image class='img-delete' bindtap='deleteTag' data-item='{{item}}' data-index='{{index}}' src='/image/commend/ic_delete.png'></image>
+      <view class='item-right'>
+        <!--分享 -->
+        <view class='view-like'>
+          <button open-type="share" data-item='{{item}}' data-index='{{index}}' id='shareBtn' type="primary" hover-class="other-button-hover" class='share'>
+            <image class='img-delete' src='/image/commend/ic_share.png'></image>
+          </button>
+
+          <text class='text-num'>{{item.share}}</text>
+        </view>
+        <!--评论 -->
+        <view class='view-like'>
+          <image class='img-delete' src='/image/commend/ic_commend.png'></image>
+          <text class='text-num'>{{item.comment}}</text>
+        </view>
+
+        <!--收藏  -->
+        <view class='view-like' bindtap='collect' data-item='{{item}}' data-index='{{index}}'>
+          <image class='img-delete' src='{{item.islike?"/image/commend/ic_has_like.png":"/image/commend/ic_like.png"}}'></image>
+          <text class='text-num'>{{item.like}}</text>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+</template>

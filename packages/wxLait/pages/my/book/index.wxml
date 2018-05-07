@@ -1,0 +1,15 @@
+<import src="../../../components/prompt/prompt.wxml" />
+<view class='item-p' wx:for="{{bookList}}" wx:key="" wx:if="{{bookList!=null&&bookList.length>0}}">
+  <view class='item-left'>
+    <image class='img-book-head' src='/image/topic/ic_logo.png'></image>
+    <view class='book-text'>
+      <text class='book-title'>{{item.nickname}}</text>
+      <text class='book-content'>{{item.description==null?"暂无描述":item.description}}</text>
+    </view>
+  </view>
+
+  <view class='item-right'>
+    <image class='img-notice' src='/image/my/ic_notice_res.png'></image>
+  </view>
+</view>
+  <template is="prompt" hidden="true" data="{{ ...$wux.prompt.msg3}}" />

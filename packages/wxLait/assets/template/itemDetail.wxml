@@ -1,0 +1,62 @@
+<template name="list">
+  <view class="item-p" data-index='{{index}}' wx:for="{{resultList}}" wx:key="">
+    <view class="item-top">
+      <view class='item-left'>
+        <view class="avatar">
+
+          <image class="img" src="{{item.coverImage==null?'/image/topic/ic_logo.png':item.coverImage}}"></image>
+        </view>
+        <text class='text-tag'>{{item.title}}</text>
+      </view>
+      <text bindtap='bookUser' data-item='{{item}}' data-index='{{index}}' class="{{item.isFollow?'hasAskBtn':'askBtn'}}">{{item.isFollow?'已关注':'+ 关注'}}</text>
+    </view>
+    
+      <text class='item-content-detail'>{{item.content}}</text>
+   
+    <view>
+
+      <view class='image-p' wx:if='{{item.imageArr!=null||item.videos!=null}}' class='item-center'>
+
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for="{{item.imageArr}}" wx:key="{{index}}">
+            <view class="weui-grid__icon">
+              <image data-index="{{index}}" bindtap="previewImage" data-index="{{index}}" src=" {{item}}" mode="scaleToFill" />
+            </view>
+
+          </view>
+        </view>
+
+        <video wx:if='{{item.videos!=null}}' class='view-video' src='{{item.videos}}' controls></video>
+
+      </view>
+    </view>
+
+
+    <view class='item-bottom'>
+      <image class='img-delete' bindtap='deleteTag' data-item='{{item}}' data-index='{{index}}' src='/image/commend/ic_delete.png'></image>
+      <view class='item-right'>
+        <!--分享 -->
+        <view class='view-like'>
+          <button open-type="share" data-item='{{item}}' data-index='{{index}}' id='shareBtn' type="primary" hover-class="other-button-hover" class='share'>
+            <image class='img-delete' src='/image/commend/ic_share.png'></image>
+          </button>
+
+          <text class='text-num'>{{item.share}}</text>
+        </view>
+        <!--评论 -->
+        <view class='view-like'>
+          <image class='img-delete' src='/image/commend/ic_commend.png'></image>
+          <text class='text-num'>{{item.comment}}</text>
+        </view>
+
+        <!--收藏  -->
+        <view class='view-like' bindtap='collect' data-item='{{item}}' data-index='{{index}}'>
+          <image class='img-delete' src='{{item.islike?"/image/commend/ic_has_like.png":"/image/commend/ic_like.png"}}'></image>
+          <text class='text-num'>{{item.like}}</text>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</template>

@@ -1,0 +1,116 @@
+/* pages/commend/detail/index.wxss */
+
+.margin-top-10{
+  margin-top: 10px;
+}
+.bottom-view {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: white;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+
+/* 评论 */
+
+.view-commend-p {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.text-commend {
+  font-size: 30rpx;
+  padding: 40rpx;
+  color: #b2b2b2;
+}
+
+.bottom-view {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-commend {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 35px;
+  text-align:left;
+  background-color: #f5f5f7;
+  padding-left: 5px;
+  border-radius: 9px;
+  border: 1px solid #f0f0f0;
+  flex: 1;
+}
+.btn-send-p{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: #37aeff;
+  margin-right: 30rpx;
+  width: 150rpx;
+  height: 70rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  border-radius: 60rpx;
+}
+
+.img-send-p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
+}
+
+.img-send{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+}
+.text-send{
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 70rpx;
+  text-align: center;
+  flex-direction: row;
+  color: white;
+  vertical-align: middle;
+}
+/* 评论item */
+.discuss-p{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.discuss-time{
+  font-size: 12px;
+  color: #b2b2b2;
+}
+.discuss-content-p{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.bottom-margin-60{
+  height: 60px;
+}
+.discuss-content-text{
+  font-size: 14px;
+  margin-left: 40px;
+}

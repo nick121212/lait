@@ -1,0 +1,22 @@
+<import src="/dist/toast/index.wxml" />
+<view class='container'>
+  <view class='view-top'>
+    <image class='img-banner' src='../../image/welcome/ic_tag_banner.png'></image>
+  </view>
+    <view class="grids grids-small">
+      <block wx:for="{{tags}}" wx:key="">
+        <view class="grid" url="" wx:key="{{index}}">
+        <view class='item-text' bindtap='clinkItem' data-index="{{index}}" data-item="{{item}}">
+          <text class="{{item.isSelected?'tag-selected':'tag-normal'}}">{{item.name}}</text>
+            </view>
+        </view>
+      </block>
+    </view>
+
+
+
+
+
+
+  <text bindtap='goHome' class='go-next'> 开启 ></text>
+</view>

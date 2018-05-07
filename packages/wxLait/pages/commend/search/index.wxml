@@ -1,0 +1,13 @@
+<import src="../../../components/prompt/prompt.wxml" />
+<view class='search-p'>
+  <input class='input-search' type='text' bindinput="inputContent" placeholder="请输入搜索内容" maxlength='200'bindconfirm='goSearch' confirm-type="search" auto-focus='true'></input>
+  <image bindtap='goSearch' class='img-search' src='/image/commend/ic_search.png'></image>
+</view>
+<view class='list-top'></view>
+<import src="../../../assets/template/homeItem.wxml" />
+
+<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="scrollMore">
+  <template is="list" data="{{resultList}}" />
+  <view class="loading" hidden="{{!showLoading}}">正在加载...</view>
+  <template is="prompt" hidden="true" data="{{ ...$wux.prompt.msg3}}" />
+</scroll-view>

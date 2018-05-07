@@ -1,0 +1,25 @@
+
+ <import src="../../components/prompt/prompt.wxml" />
+ <import src="../../assets/template/homeItem.wxml" />
+ <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <view wx:for="{{tags}}" wx:key="" class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav">{{item.name}}
+  </view>
+ <view class='search-p' bindtap='search'>
+   <image class='img-search' src='/image/commend/ic_search.png'></image> 
+</view>
+</scroll-view> 
+
+<swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+  <swiper-item wx:for="{{tags}}" wx:key="">
+    <block wx:key="*this">
+       <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="scrollMore" > 
+        <template is="list" data="{{resultList}}" />
+         <view class="loading" hidden="{{!showLoading}}">正在加载...</view>
+         <template is="prompt" hidden="true" data="{{ ...$wux.prompt.msg3}}" />
+       </scroll-view> 
+    </block>
+  </swiper-item>
+</swiper>
+
+

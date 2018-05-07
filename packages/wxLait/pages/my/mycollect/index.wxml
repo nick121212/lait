@@ -1,0 +1,4 @@
+<import src="../../../components/prompt/prompt.wxml" />
+<import src="../../../assets/template/homeItem.wxml" />
+<template is="list" data="{{resultList}}" />
+<template is="prompt" hidden="true" data="{{ ...$wux.prompt.msg3}}" />
