@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+.vscode
+packages/lait.tv/node_modules
+packages/lait.tv/.history
+.history
+packages/lait.tv/ormconfig.json

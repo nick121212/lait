@@ -1,0 +1,33 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+            "./dist/modules/auth/index.con.js",
+            "./dist/modules/post/index.con.js",
+            "./dist/modules/comment/index.con.js",
+            "./dist/modules/tag/index.con.js",
+            "./dist/modules/user/index.con.js"
+        ],
+        "includePattern": ".+\\.(j|t)s(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+        "template": "node_modules/docdash/",
+        "encoding": "utf8",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true
+        }
+    }
+}

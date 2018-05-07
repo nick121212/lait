@@ -1,0 +1,24 @@
+{
+    "auth": {
+        "providers": {
+            "weapp": {
+                "authInfo": "authInfo",
+                "provider": "weixin",
+                "clientID": "wx994ee0e4609b652a",
+                "clientSecret": "778bb7c28007f23baad80c91c5ef5b2e",
+                "requireState": false,
+                "authorizationURL": "https://api.weixin.qq.com/sns/jscode2session",
+                "session": false,
+                "scope": "weapp_login",
+                "failureFlash": true
+            }
+        }
+    },
+    "elastic": {
+        "client": {
+            "host": "www.bebewiki.com:9600",
+            "httpAuth": "nick:13564548667"
+        }
+    },
+    "port": 3003
+}
